@@ -17,3 +17,45 @@ class Post(models.Model):
 
     class Meta:
         ordering = ('-id',)
+
+from forms import AddTextPostForm, AddPhotoPostForm
+
+Post.TYPE_FORMS = {
+    Post.TYPE_TEXT: AddTextPostForm,
+    Post.TYPE_PHOTO: AddPhotoPostForm
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -22,7 +22,7 @@
             <a class="brand" href="{% url index %}">Happy Evil</a>
             <div class="nav-collapse collapse">
                 <ul class="nav">
-                    <li><a href="#">New</a></li>
+                    <li><a href="{% url board:add_choice %}">New</a></li>
                 </ul>
                 <ul class="nav pull-right">
                     {% if user.is_authenticated %}

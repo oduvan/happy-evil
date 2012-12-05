@@ -3,6 +3,9 @@
 {% block content %}
     {% for post in object_list %}
         <blockquote>
+            {% if post.type == post.TYPE_PHOTO %}
+                <img src="{{ post.photo.url }}" /> <br>
+            {% endif %}
             {{ post.text|linebreaksbr }}
             <small>
                 {{ post.author }} {{ post.dt_created|date }}

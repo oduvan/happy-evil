@@ -1,0 +1,10 @@
+{% extends "base.html" %}
+
+{% block content %}
+    What post do you want to create?
+    <ul>
+        {% for type in types %}
+            <li><a href="{% url board:add type=type.0 %}">{{ type.1 }}</a></li>
+        {% endfor %}
+    </ul>
+{% endblock %}
