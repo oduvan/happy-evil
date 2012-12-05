@@ -7,6 +7,8 @@ admin.autodiscover()
 
 urlpatterns = patterns('',
     url(r'^$', IndexView.as_view(), name='index'),
+    (r'^accounts/login/$', 'django.contrib.auth.views.login'),
+    (r'^accounts/logout/$', 'django.contrib.auth.views.logout'),
     # Examples:
     # url(r'^$', 'he.views.home', name='home'),
     # url(r'^he/', include('he.foo.urls')),
