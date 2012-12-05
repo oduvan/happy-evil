@@ -1,5 +1,5 @@
 from django.conf.urls import patterns, include, url
-from views import IndexView
+from views import IndexView, RegistrationView
 
 # Uncomment the next two lines to enable the admin:
 from django.contrib import admin
@@ -9,6 +9,7 @@ urlpatterns = patterns('',
     url(r'^$', IndexView.as_view(), name='index'),
     (r'^accounts/login/$', 'django.contrib.auth.views.login'),
     (r'^accounts/logout/$', 'django.contrib.auth.views.logout'),
+    url(r'^accounts/registration/$', RegistrationView.as_view(), name='registration'),
     # Examples:
     # url(r'^$', 'he.views.home', name='home'),
     # url(r'^he/', include('he.foo.urls')),
