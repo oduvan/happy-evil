@@ -5,6 +5,9 @@ get_folder = lambda folder:  os.path.join(os.path.dirname(__file__),'..',folder)
 #    root_folder = os.path.dirname(__file__)
 #    return os.path.join(root_folder,'..',folder)
 
+import sys
+sys.path.append(get_folder('apps'))
+
 # Django settings for he project.
 
 DEBUG = True
@@ -123,8 +126,9 @@ INSTALLED_APPS = (
     'django.contrib.sites',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'board',
     # Uncomment the next line to enable the admin:
-    # 'django.contrib.admin',
+    'django.contrib.admin',
     # Uncomment the next line to enable admin documentation:
     # 'django.contrib.admindocs',
 )
