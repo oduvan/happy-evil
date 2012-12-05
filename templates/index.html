@@ -1,5 +1,12 @@
 {% extends "base.html" %}
 
 {% block content %}
-    <h2>This is my fist template</h2>
+    {% for post in object_list %}
+        <blockquote>
+            {{ post.text|linebreaksbr }}
+            <small>
+                {{ post.author }} {{ post.dt_created|date }}
+            </small>
+        </blockquote>
+    {% endfor %}
 {% endblock %}
