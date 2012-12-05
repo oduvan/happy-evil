@@ -1,3 +1,10 @@
+import os
+get_folder = lambda folder:  os.path.join(os.path.dirname(__file__),'..',folder)
+
+#def get_folder(folder):
+#    root_folder = os.path.dirname(__file__)
+#    return os.path.join(root_folder,'..',folder)
+
 # Django settings for he project.
 
 DEBUG = True
@@ -103,6 +110,7 @@ ROOT_URLCONF = 'he.urls'
 WSGI_APPLICATION = 'he.wsgi.application'
 
 TEMPLATE_DIRS = (
+    get_folder('templates'),
     # Put strings here, like "/home/html/django_templates" or "C:/www/django/templates".
     # Always use forward slashes, even on Windows.
     # Don't forget to use absolute paths, not relative paths.
